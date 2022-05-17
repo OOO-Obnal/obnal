@@ -1,0 +1,33 @@
+.input {
+  max-width: 300px;
+  width: 100%;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+
+  &--outlined {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+
+    &:focus {
+      border-color: darken(#d8d8d8, 15%);
+    }
+  }
+
+  &--bordered {
+    border-bottom: 1px solid #d8d8d8;
+    &:focus {
+      border-color: darken(#d8d8d8, 15%);
+    }
+  }
+
+  &::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+  }
+}
