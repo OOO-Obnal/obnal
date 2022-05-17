@@ -1,10 +1,10 @@
 import React from "react";
-import UiTest from "./components/UiTest";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <UiTest />
+      <Header />
     </div>
   );
 };

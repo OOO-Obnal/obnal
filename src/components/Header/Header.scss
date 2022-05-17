@@ -1,0 +1,44 @@
+.header {
+  display: block;
+  background-color: #695852;
+
+  &__wrapper {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+  }
+
+  img {
+    width: 95px;
+    height: 95px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 0 30px;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+
+    a {
+      padding-bottom: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #ede1d8;
+      transition: 0.15s ease-in-out;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        padding-bottom: 0;
+        color: darken(#ede1d8, 10%);
+        border-bottom: 1px solid darken(#ede1d8, 10%);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 0 20px;
+  }
+}
