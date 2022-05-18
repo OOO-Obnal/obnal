@@ -1,5 +1,5 @@
 .input {
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   padding: 10px 20px;
   color: rgb(0, 0, 0);
@@ -7,20 +7,21 @@
   font-weight: 400;
   outline: none;
   border: none;
+  background-color: transparent;
 
-  &--outlined {
-    border: 1px solid #d8d8d8;
+  &--dark-outlined {
+    border: 1px solid darken(#ede1d8, 15%);
     border-radius: 5px;
 
     &:focus {
-      border-color: darken(#d8d8d8, 15%);
+      border-color: darken(#ede1d8, 25%);
     }
   }
 
-  &--bordered {
-    border-bottom: 1px solid #d8d8d8;
+  &--dark-bordered {
+    border-bottom: 1px solid #ede1d8;
     &:focus {
-      border-color: darken(#d8d8d8, 15%);
+      border-color: darken(#ede1d8, 15%);
     }
   }
 
