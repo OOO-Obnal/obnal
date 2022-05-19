@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
 import Button from "../UI/Button";
 import "./Header.scss";
 
 const Header = () => {
+  let navigate = useNavigate();
+
   return (
     <header className="header">
       <div className="container">
@@ -24,8 +26,16 @@ const Header = () => {
             </li>
           </ul>
           <div className="header__buttons">
-            <Button text="Войти" type="dark" />
-            <Button text="Зарегистрироватся" type="dark-secondary" />
+            <Button
+              text="Войти"
+              type="dark"
+              onClick={() => navigate("/auth")}
+            />
+            <Button
+              text="Зарегистрироватся"
+              type="dark-secondary"
+              onClick={() => navigate("/reg")}
+            />
           </div>
         </div>
       </div>
