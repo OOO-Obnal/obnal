@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Order from "../components/Order";
 import Services from "../components/Services";
 import Why from "../components/Why";
+import authContext from "../context/authContext";
 
 const Main = () => {
   return (

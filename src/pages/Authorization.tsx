@@ -1,11 +1,14 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
+import authContext from "../context/authContext";
 import { userAPI } from "../services/UserService";
+import { User } from "../types/User";
 
 const Authorization = () => {
   const { data: users, isError, isFetching } = userAPI.useGetUsersQuery();
+  const { setAuth, setUser } = useContext(authContext);
 
   let navigate = useNavigate();
 
@@ -13,14 +16,24 @@ const Authorization = () => {
   const [password, setPassword] = useState("");
 
   const [authError, setAuthError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const onUserAuth = () => {
     const user = users?.filter((user) => user.email === email)[0];
 
     if (user) {
       if (user.password === password) {
-        alert("Вы авторизованы");
-        navigate("/");
+        if (setAuth) {
+          setAuth(true);
+        }
+        if (setUser) {
+          setUser(user);
+        }
+        setSuccess(true);
+        setTimeout(() => {
+          navigate("/");
+          setSuccess(false);
+        }, 1000);
       } else {
         setAuthError(true);
       }
@@ -42,6 +55,11 @@ const Authorization = () => {
             {isError && (
               <div className="authorization__form-error">
                 Ошибка: ошибка при отправке данных
+              </div>
+            )}
+            {success && (
+              <div className="authorization__form-success">
+                Вы успешно авторизовались
               </div>
             )}
             <Input

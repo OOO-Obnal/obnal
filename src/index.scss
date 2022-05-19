@@ -47,6 +47,14 @@ body {
       color: #ac2d2d;
       text-align: center;
     }
+
+    &-success {
+      padding: 10px;
+      background-color: rgba(28, 131, 24, 0.3);
+      border-radius: 5px;
+      color: #116d11;
+      text-align: center;
+    }
   }
 }
 
@@ -76,6 +84,14 @@ body {
       background-color: rgba(252, 0, 0, 0.3);
       border-radius: 5px;
       color: #ac2d2d;
+      text-align: center;
+    }
+
+    &-success {
+      padding: 10px;
+      background-color: rgba(28, 131, 24, 0.3);
+      border-radius: 5px;
+      color: #116d11;
       text-align: center;
     }
   }

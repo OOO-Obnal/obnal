@@ -8,12 +8,6 @@
       "userTheme": "dark"
     },
     {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
       "name": "1",
       "email": "1",
       "password": "12",
@@ -26,6 +20,41 @@
       "email": "12",
       "userTheme": "dark",
       "id": 4
+    },
+    {
+      "name": "SuperSkamer",
+      "password": "skam",
+      "email": "SKAM@mail.secret",
+      "userTheme": "dark",
+      "id": 5
+    },
+    {
+      "name": "234",
+      "password": "123",
+      "email": "123",
+      "userTheme": "dark",
+      "id": 6
+    },
+    {
+      "name": "1111",
+      "password": "1111",
+      "email": "1111",
+      "userTheme": "dark",
+      "id": 7
+    },
+    {
+      "name": "1111111",
+      "password": "1111111",
+      "email": "1111111",
+      "userTheme": "dark",
+      "id": 8
+    },
+    {
+      "name": "SKAMMMER",
+      "password": "1111111",
+      "email": "1111111",
+      "userTheme": "dark",
+      "id": 9
     }
   ]
 }

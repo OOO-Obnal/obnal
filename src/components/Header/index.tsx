@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext, useState, CSSProperties } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.png";
+import authContext from "../../context/authContext";
 import Button from "../UI/Button";
+import userIcon from "../../assets/img/user.png";
+
 import "./Header.scss";
 
 const Header = () => {
   let navigate = useNavigate();
+
+  const { user } = useContext(authContext);
+
+  const [userMenu, setUserMenu] = useState(false);
 
   return (
     <header className="header">
@@ -25,18 +32,26 @@ const Header = () => {
               <Link to="/420">отсутствуют</Link>
             </li>
           </ul>
-          <div className="header__buttons">
-            <Button
-              text="Войти"
-              type="dark"
-              onClick={() => navigate("/auth")}
-            />
-            <Button
-              text="Зарегистрироватся"
-              type="dark-secondary"
-              onClick={() => navigate("/reg")}
-            />
-          </div>
+          {user?.name ? (
+            <div className="header__user">
+              <Button text={user?.name} type="dark-secondary">
+                <img src={userIcon} alt="user" />
+              </Button>
+            </div>
+          ) : (
+            <div className="header__buttons">
+              <Button
+                text="Войти"
+                type="dark"
+                onClick={() => navigate("/auth")}
+              />
+              <Button
+                text="Зарегистрироватся"
+                type="dark-secondary"
+                onClick={() => navigate("/reg")}
+              />
+            </div>
+          )}
         </div>
       </div>
     </header>

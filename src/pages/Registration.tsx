@@ -1,13 +1,19 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/UI/Button";
 import Input from "../components/UI/Input";
+import authContext from "../context/authContext";
 import { userAPI } from "../services/UserService";
 
 const Registration = () => {
-  const [postUser, { isError, isLoading, isSuccess }] =
-    userAPI.usePostUserMutation();
+  const { setAuth, setUser } = useContext(authContext);
+
+  let navigate = useNavigate();
+
+  const [postUser, { isError, isLoading }] = userAPI.usePostUserMutation();
 
   const [regError, setRegError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +24,20 @@ const Registration = () => {
     if (password === secondPassword) {
       const newUser = { name, password, email, userTheme: "dark" };
       postUser(newUser);
+
+      if (setAuth) {
+        setAuth(true);
+      }
+      if (setUser) {
+        setUser(newUser);
+      }
+
+      setSuccess(true);
+
+      setTimeout(() => {
+        navigate("/");
+        setSuccess(false);
+      }, 1000);
       setRegError(false);
     } else {
       setRegError(true);
@@ -37,6 +57,11 @@ const Registration = () => {
             {isError && (
               <div className="registration__form-error">
                 Ошибка: ошибка при отправке данных
+              </div>
+            )}
+            {success && (
+              <div className="registration__form-success">
+                Вы успешно авторизовались
               </div>
             )}
             <Input
