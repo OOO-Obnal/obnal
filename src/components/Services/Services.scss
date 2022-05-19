@@ -1,0 +1,38 @@
+.services {
+  border: 2px solid darken(rgb(224, 196, 139), 30%);
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 50px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+
+  &__h {
+    font-family: "Monsteratt", sans-serif;
+    letter-spacing: 2px;
+    color: darken(bisque, 75%);
+    margin-bottom: 30px;
+  }
+
+  &__li {
+    width: 350px;
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    border-radius: 10px;
+    font-family: "Monsteratt", sans-serif;
+    text-transform: uppercase;
+    color: darken(bisque, 80%);
+    letter-spacing: 8px;
+    font-size: 18px;
+  }
+}
+
+.ko {
+  text-align: right;
+  width: 170px;
+}

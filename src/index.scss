@@ -50,6 +50,12 @@ body {
   display: flex;
 }
 
+.main__content {
+  padding-bottom: 50px;
+  flex: 1;
+  width: 100%;
+}
+
 .main__sidebar {
   min-height: calc(100vh - 169px);
   display: block;

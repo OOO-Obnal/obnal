@@ -1,0 +1,47 @@
+.why {
+  border: 2px solid darken(rgb(224, 196, 139), 30%);
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 50px;
+  width: 70%;
+
+  &__Li,
+  &__how_text {
+    display: block;
+    list-style: none;
+    font-size: 20px;
+    font-family: "Mosterrat", sans-serif;
+    color: darken(#940000, 10%);
+    font-weight: 500;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__how_title {
+    color: darken(#940000, 20%);
+    font-family: "Mosterrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__how_text {
+    text-align: left;
+    line-height: 1.5;
+  }
+}
+
+.mainWhyLi {
+  letter-spacing: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: darken(#940000, 20%);
+  margin-bottom: 50px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.title {
+  padding-top: 50px;
+  text-align: right;
+}
