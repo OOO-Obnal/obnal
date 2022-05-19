@@ -9,6 +9,7 @@ interface InputPropsType {
   placeholder: string;
   onChange?: React.ChangeEventHandler;
   variant: string;
+  value?: string;
 }
 
 const Input: FC<InputPropsType> = ({
@@ -16,6 +17,7 @@ const Input: FC<InputPropsType> = ({
   placeholder,
   onChange,
   variant,
+  value,
 }) => {
   return (
     <input
@@ -23,6 +25,7 @@ const Input: FC<InputPropsType> = ({
       type={type}
       placeholder={placeholder}
       onChange={onChange}
+      value={value}
     />
   );
 };

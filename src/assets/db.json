@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "test",
+      "password": "123456",
+      "email": "test@mail.ru",
+      "userTheme": "dark"
+    },
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "password": "12",
+      "userTheme": "dark",
+      "id": 3
+    },
+    {
+      "name": "12",
+      "password": "12",
+      "email": "12",
+      "userTheme": "dark",
+      "id": 4
+    }
+  ]
+}
