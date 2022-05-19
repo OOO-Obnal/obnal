@@ -23,6 +23,7 @@ body {
 // registration
 
 .registration {
+  min-height: calc(100vh - 169px);
   padding-top: 50px;
   &__wrapper {
     display: flex;
@@ -38,13 +39,49 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px 0;
+
+    &-error {
+      padding: 10px;
+      background-color: rgba(252, 0, 0, 0.3);
+      border-radius: 5px;
+      color: #ac2d2d;
+      text-align: center;
+    }
+  }
+}
+
+//authorization
+
+.authorization {
+  min-height: calc(100vh - 169px);
+  padding-top: 50px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form {
+    width: 360px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+
+    &-error {
+      padding: 10px;
+      background-color: rgba(252, 0, 0, 0.3);
+      border-radius: 5px;
+      color: #ac2d2d;
+      text-align: center;
+    }
   }
 }
 
 // sidebar
-
-.main {
-}
 
 .main__wrapper {
   display: flex;
