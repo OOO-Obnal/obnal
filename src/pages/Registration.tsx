@@ -22,7 +22,13 @@ const Registration = () => {
 
   const onUserAdd = () => {
     if (password === secondPassword) {
-      const newUser = { name, password, email, userTheme: "dark" };
+      const newUser = {
+        name,
+        password,
+        email,
+        userTheme: "dark",
+        role: "user",
+      };
       postUser(newUser);
 
       if (setAuth) {

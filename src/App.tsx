@@ -22,7 +22,7 @@ const App = () => {
           {auth === false && <Route path="/*" element={<Authorization />} />}
           <Route path="/reg" element={<Registration />} />
           <Route path="/auth" element={<Authorization />} />
-          {auth && <Route path="*" element={<Main />} />}
+          {auth && <Route path="/*" element={<Main />} />}
         </Routes>
         <Footer />
       </authContext.Provider>

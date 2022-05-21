@@ -10,6 +10,9 @@ export const userAPI = createApi({
     getUsers: bulid.query<User[], void>({
       query: () => `/users`,
     }),
+    getUserById: bulid.query<User, number>({
+      query: (id) => `/users/${id}`,
+    }),
     postUser: bulid.mutation<User, Partial<User>>({
       query(newUser) {
         return {

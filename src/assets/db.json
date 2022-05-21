@@ -5,42 +5,75 @@
       "password": "12",
       "email": "12",
       "userTheme": "dark",
-      "id": 4
+      "id": 4,
+      "role": "user"
     },
     {
       "name": "SuperSkamer",
       "password": "skam",
       "email": "SKAM@mail.secret",
       "userTheme": "dark",
-      "id": 5
+      "id": 5,
+      "role": "user"
     },
     {
       "name": "234",
       "password": "123",
       "email": "123",
       "userTheme": "dark",
-      "id": 6
+      "id": 6,
+      "role": "user"
     },
     {
       "name": "1111",
       "password": "1111",
       "email": "1111",
       "userTheme": "dark",
-      "id": 7
+      "id": 7,
+      "role": "user"
     },
     {
       "name": "1111111",
       "password": "1111111",
       "email": "1111111",
       "userTheme": "dark",
-      "id": 8
+      "id": 8,
+      "role": "user"
     },
     {
       "name": "SKAMMMER",
       "password": "1111111",
       "email": "1111111",
       "userTheme": "dark",
-      "id": 9
+      "id": 9,
+      "role": "user"
+    },
+    {
+      "name": "admin",
+      "password": "admin",
+      "email": "admin@mail.ru",
+      "userTheme": "dark",
+      "id": 10,
+      "role": "admin"
+    }
+  ],
+  "news": [
+    {
+      "id": 0,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.02.22",
+      "time": "12:30",
+      "likes": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "userId": 10,
+      "newsId": 0,
+      "text": "Текст комментария",
+      "likes": 4
     }
   ]
 }
