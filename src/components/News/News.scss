@@ -1,0 +1,16 @@
+.news {
+  border: 2px solid darken(rgb(224, 196, 139), 30%);
+  margin: 50px;
+  padding: 50px;
+  width: 95%;
+  min-height: calc(100vh - 169px);
+
+  &__post {
+    font-family: "Mosterrat", sans-serif;
+    font-size: 16px;
+    color: rgb(0, 217, 255);
+    padding: 10px;
+    border: 2px solid rgb(64, 24, 175);
+    width: 50%;
+  }
+}

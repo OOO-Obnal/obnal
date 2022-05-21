@@ -23,7 +23,7 @@ const Header = () => {
           </Link>
           <ul className="header__menu">
             <li>
-              <Link to="/228">варианты</Link>
+              <Link to="/news">Новости</Link>
             </li>
             <li>
               <Link to="/1337">исключительно</Link>
