@@ -55,6 +55,14 @@
       "userTheme": "dark",
       "id": 10,
       "role": "admin"
+    },
+    {
+      "name": "Kall",
+      "password": "Kall",
+      "email": "Kall",
+      "userTheme": "dark",
+      "role": "user",
+      "id": 11
     }
   ],
   "news": [
