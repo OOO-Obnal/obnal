@@ -22,5 +22,22 @@ export const userAPI = createApi({
         };
       },
     }),
+    updateUser: bulid.mutation<User, Partial<User>>({
+      query(user) {
+        return {
+          url: `/users/${user.id}`,
+          method: "PUT",
+          body: user,
+        };
+      },
+    }),
+    deleteUser: bulid.mutation<User, Partial<number>>({
+      query(id) {
+        return {
+          url: `/users/${id}`,
+          method: "DELETE",
+        };
+      },
+    }),
   }),
 });

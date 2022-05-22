@@ -1,0 +1,39 @@
+.settings {
+  padding: 50px;
+  &__form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    background-color: #e7d7d0;
+
+    &-inner {
+      padding: 20px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    &-desc {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-success {
+      padding: 10px;
+      background-color: rgba(28, 131, 24, 0.3);
+      border-radius: 5px;
+      color: #116d11;
+      text-align: center;
+    }
+
+    &-buttons {
+      background: #a58375;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

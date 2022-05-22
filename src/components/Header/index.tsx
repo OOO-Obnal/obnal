@@ -34,7 +34,11 @@ const Header = () => {
           </ul>
           {user?.name ? (
             <div className="header__user">
-              <Button text={user?.name} type="dark-secondary">
+              <Button
+                text={user?.name}
+                type="dark-secondary"
+                onClick={() => navigate("/user")}
+              >
                 <img src={userIcon} alt="user" />
               </Button>
             </div>

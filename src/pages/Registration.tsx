@@ -11,6 +11,7 @@ const Registration = () => {
   let navigate = useNavigate();
 
   const [postUser, { isError, isLoading }] = userAPI.usePostUserMutation();
+  const { data: users } = userAPI.useGetUsersQuery();
 
   const [regError, setRegError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -21,32 +22,36 @@ const Registration = () => {
   const [secondPassword, setSecondPassword] = useState("");
 
   const onUserAdd = () => {
-    if (password === secondPassword) {
-      const newUser = {
-        name,
-        password,
-        email,
-        userTheme: "dark",
-        role: "user",
-      };
-      postUser(newUser);
-
-      if (setAuth) {
-        setAuth(true);
-      }
-      if (setUser) {
-        setUser(newUser);
-      }
-
-      setSuccess(true);
-
-      setTimeout(() => {
-        navigate("/");
-        setSuccess(false);
-      }, 1000);
-      setRegError(false);
-    } else {
+    if (users?.filter((user) => user.email === email).length !== 0) {
       setRegError(true);
+    } else {
+      if (password === secondPassword) {
+        const newUser = {
+          name,
+          password,
+          email,
+          userTheme: "dark",
+          role: "user",
+        };
+        postUser(newUser);
+
+        if (setAuth) {
+          setAuth(true);
+        }
+        if (setUser) {
+          setUser(newUser);
+        }
+
+        setSuccess(true);
+
+        setTimeout(() => {
+          navigate("/");
+          setSuccess(false);
+        }, 1000);
+        setRegError(false);
+      } else {
+        setRegError(true);
+      }
     }
   };
 
@@ -57,7 +62,7 @@ const Registration = () => {
           <div className="registration__form">
             {regError && (
               <div className="registration__form-error">
-                Ошибка: пароли не совпадают
+                Ошибка: проверьте правильно ли введены данные
               </div>
             )}
             {isError && (
