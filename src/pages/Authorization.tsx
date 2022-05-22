@@ -21,7 +21,7 @@ const Authorization = () => {
   const onUserAuth = () => {
     const user = users?.filter((user) => user.email === email)[0];
 
-    if (user) {
+    if (user && user !== {}) {
       if (user.password === password) {
         if (setAuth) {
           setAuth(true);
