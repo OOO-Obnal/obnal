@@ -31,7 +31,7 @@ export const userAPI = createApi({
         };
       },
     }),
-    deleteUser: bulid.mutation<User, Partial<number>>({
+    deleteUser: bulid.mutation<User, Partial<number | undefined>>({
       query(id) {
         return {
           url: `/users/${id}`,

@@ -7,20 +7,13 @@ import Main from "./pages/Main";
 import Registration from "./pages/Registration";
 import authContext from "./context/authContext";
 import { User } from "./types/User";
-<<<<<<< HEAD
 import UserPage from "./pages/User";
-const App = () => {
-  const [auth, setAuth] = useState(false);
-  const [user, setUser] = useState<User>({});
-=======
-import News from "./components/News/News";
 import New from "./components/New/New";
+import News from "./components/News/News";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
   const [user, setUser] = useState<User>({});
-  console.log(auth, user);
->>>>>>> 4fc09e6a0000c50325b32b7abd9b03debec7aab3
 
   return (
     <div className="App">

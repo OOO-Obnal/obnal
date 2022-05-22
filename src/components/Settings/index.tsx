@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import authContext from "../../context/authContext";
 import { userAPI } from "../../services/UserService";
 import Button from "../UI/Button";
@@ -7,12 +8,15 @@ import Input from "../UI/Input";
 import "./Settings.scss";
 
 const Settings = () => {
-  const { user, setUser } = useContext(authContext);
+  const { user, setUser, setAuth } = useContext(authContext);
   const [updateUser, { isSuccess }] = userAPI.useUpdateUserMutation();
+  const [deleteUser] = userAPI.useDeleteUserMutation();
 
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
   const [password, setPassword] = useState(user?.password);
+
+  let navigate = useNavigate();
 
   const onSaveChanges = () => {
     const updatedUser = { ...user };
@@ -32,6 +36,16 @@ const Settings = () => {
 
     if (setUser) {
       setUser(updatedUser);
+    }
+  };
+
+  const onUserDelete = () => {
+    if (setUser && setAuth) {
+      setUser({});
+      setAuth(false);
+    }
+    if (user && user.id) {
+      deleteUser(user.id);
     }
   };
 
@@ -82,7 +96,11 @@ const Settings = () => {
               type="dark-secondary"
               onClick={onSaveChanges}
             />
-            <Button text="Удалить аккаунт" type="light" />
+            <Button
+              text="Удалить аккаунт"
+              type="light"
+              onClick={onUserDelete}
+            />
           </div>
         </div>
       </div>

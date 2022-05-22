@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "name": "user",
-      "password": "121",
-      "email": "12",
-      "userTheme": "dark",
-      "id": 4,
-      "role": "user"
-    },
-    {
       "name": "SuperSkamer",
       "password": "skam",
       "email": "SKAM@mail.secret",
