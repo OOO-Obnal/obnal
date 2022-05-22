@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { newsAPI } from "../../services/NewsService";
+import "./New.scss";
 
 const New = () => {
   const joint = useLocation();
