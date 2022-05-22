@@ -1,6 +1,6 @@
 export interface Comms {
-  id: number;
-  userId: number;
+  id?: number;
+  userId?: number;
   newsId: number;
   text: string;
   likes: number;
