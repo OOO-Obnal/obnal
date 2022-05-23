@@ -31,25 +31,103 @@
       "userTheme": "dark",
       "id": 10,
       "role": "admin"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "name": "Kall",
+      "password": "Kall",
+      "email": "Kall",
+      "userTheme": "dark",
+      "role": "user",
+      "id": 11
+    },
+    {
+      "name": "12",
+      "password": "12",
+      "email": "12",
+      "userTheme": "dark",
+      "role": "user",
+      "id": 11
+    },
+    {
+      "name": "123",
+      "password": "12",
+      "email": "123@a.ru",
+      "userTheme": "dark",
+      "role": "user",
+      "id": 12
+>>>>>>> ac03a3c903c7b42fb44b58268b93526579ea2235
     }
   ],
   "news": [
     {
       "id": 0,
+      "title": "Коот нассал в тапки",
+      "text": "Ахуеть не встать, это существо напало на мой мир и обоссало меня и тапки!",
+      "data": "21.02.22",
+      "time": "12:30",
+      "likes": 4
+    },
+    {
+      "id": 1,
       "title": "Название новости",
       "text": "Текст новости",
       "data": "21.02.22",
       "time": "12:30",
       "likes": 4
+    },
+    {
+      "id": 2,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.02.22",
+      "time": "12:30",
+      "likes": 4
+    },
+    {
+      "id": 3,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.03.22",
+      "time": "12:40",
+      "likes": 4
+    },
+    {
+      "id": 4,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.03.22",
+      "time": "12:40",
+      "likes": 4
     }
   ],
   "comments": [
     {
-      "id": 0,
-      "userId": 10,
+      "userName": "12",
+      "text": "12",
       "newsId": 0,
-      "text": "Текст комментария",
-      "likes": 4
+      "likes": 0,
+      "id": 1
+    },
+    {
+      "userName": "12",
+      "text": "123",
+      "newsId": 0,
+      "likes": 0,
+      "id": 2
+    },
+    {
+      "text": "123",
+      "newsId": 0,
+      "likes": 0,
+      "id": 3
+    },
+    {
+      "text": "123",
+      "newsId": 0,
+      "likes": 0,
+      "id": 4
     }
   ]
 }

@@ -1,10 +1,13 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import Order from "../components/Order";
 import Services from "../components/Services";
 import Why from "../components/Why";
+import img from "../assets/img/main.png";
 
 const Main = () => {
+  const location = useLocation();
+
   return (
     <div>
       <div className="main">
@@ -23,6 +26,25 @@ const Main = () => {
             </ul>
           </aside>
           <div className="main__content">
+            {location.pathname === "/" && (
+              <div className="">
+                <img
+                  src={img}
+                  alt="img"
+                  style={{ width: "500px", height: "500px", margin: "20px" }}
+                />
+                <img
+                  src={img}
+                  alt="img"
+                  style={{ width: "500px", height: "500px", margin: "20px" }}
+                />
+                <img
+                  src={img}
+                  alt="img"
+                  style={{ width: "500px", height: "500px", margin: "20px" }}
+                />
+              </div>
+            )}
             <Routes>
               <Route path="/why" element={<Why />} />
               <Route path="/services" element={<Services />} />
