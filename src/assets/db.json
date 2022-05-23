@@ -57,6 +57,14 @@
       "id": 11
     },
     {
+      "name": "12",
+      "password": "12",
+      "email": "12",
+      "userTheme": "dark",
+      "role": "user",
+      "id": 11
+    },
+    {
       "name": "123",
       "password": "12",
       "email": "123@a.ru",
@@ -68,99 +76,71 @@
   "news": [
     {
       "id": 0,
+      "title": "Коот нассал в тапки",
+      "text": "Ахуеть не встать, это существо напало на мой мир и обоссало меня и тапки!",
+      "data": "21.02.22",
+      "time": "12:30",
+      "likes": 4
+    },
+    {
+      "id": 1,
       "title": "Название новости",
       "text": "Текст новости",
       "data": "21.02.22",
       "time": "12:30",
       "likes": 4
+    },
+    {
+      "id": 2,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.02.22",
+      "time": "12:30",
+      "likes": 4
+    },
+    {
+      "id": 3,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.03.22",
+      "time": "12:40",
+      "likes": 4
+    },
+    {
+      "id": 4,
+      "title": "Название новости",
+      "text": "Текст новости",
+      "data": "21.03.22",
+      "time": "12:40",
+      "likes": 4
     }
   ],
   "comments": [
     {
-      "text": "123",
+      "userName": "12",
+      "text": "12",
       "newsId": 0,
       "likes": 0,
       "id": 1
     },
     {
-      "text": "143",
+      "userName": "12",
+      "text": "123",
       "newsId": 0,
       "likes": 0,
       "id": 2
     },
     {
-      "text": "43",
+      "text": "123",
       "newsId": 0,
       "likes": 0,
       "id": 3
     },
     {
-      "text": "34",
+      "text": "123",
       "newsId": 0,
       "likes": 0,
       "id": 4
-    },
-    {
-      "userId": 10,
-      "text": "123",
-      "newsId": 0,
-      "likes": 0,
-      "id": 5
-    },
-    {
-      "userId": 10,
-      "text": "123",
-      "newsId": 0,
-      "likes": 0,
-      "id": 6
-    },
-    {
-      "userId": 10,
-      "text": "123",
-      "newsId": 0,
-      "likes": 0,
-      "id": 7
-    },
-    {
-      "userId": 10,
-      "text": "123",
-      "newsId": 0,
-      "likes": 0,
-      "id": 8
-    },
-    {
-      "userId": 10,
-      "text": "123",
-      "newsId": 0,
-      "likes": 0,
-      "id": 9
-    },
-    {
-      "userId": 10,
-      "text": "55",
-      "newsId": 0,
-      "likes": 0,
-      "id": 10
-    },
-    {
-      "userId": 10,
-      "text": "5555",
-      "newsId": 0,
-      "likes": 0,
-      "id": 11
-    },
-    {
-      "userId": 10,
-      "text": "5555",
-      "newsId": 0,
-      "likes": 0,
-      "id": 12
-    },
-    {
-      "text": "",
-      "newsId": 0,
-      "likes": 0,
-      "id": 13
     }
   ]
 }

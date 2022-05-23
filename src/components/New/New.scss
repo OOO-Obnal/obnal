@@ -1,3 +1,74 @@
+.news {
+  display: flex;
+  position: relative;
+
+  .like {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 50%;
+    left: 430px;
+    top: 8px;
+    background-image: url("../../assets/img/notlike.png");
+
+    &.active {
+      background-image: url("../../assets/img/like.png");
+    }
+
+    &__like {
+      text-align: end;
+      padding-right: 10px;
+      padding-top: 5px;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+  }
+
+  .oleg {
+    display: flex;
+  }
+
+  h2 {
+    text-align: center;
+    color: darken(rgb(0, 225, 255), 15%);
+  }
+
+  .matvey {
+    color: #228;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+  }
+
+  .joint {
+    margin-top: 10px;
+    padding: 20px;
+    padding-top: 10px;
+    width: 30%;
+    border: 1px solid gray;
+  }
+
+  .boba {
+    color: #228;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Monsterrat", sans-serif;
+  }
+}
+
 .potnii_chlen {
-  border: 2px solid rgb(204, 77, 77);
+  width: 100%;
+  border: 2px solid #c4a5a5;
+  padding: 10px;
 }

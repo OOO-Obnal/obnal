@@ -5,6 +5,7 @@ import { commsAPI } from "../../services/CommsService";
 import { newsAPI } from "../../services/NewsService";
 import { userAPI } from "../../services/UserService";
 import { Comms } from "../../types/Comms";
+import Like from "../Like/Like";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 import "./New.scss";
@@ -29,7 +30,7 @@ const New = () => {
 
   const onAddPost = () => {
     if (user) {
-      const cumm = { userId: user.id, text: value, newsId, likes: 0 };
+      const cumm = { userName: user.name, text: value, newsId, likes: 0 };
       addPost(cumm);
       setValue("");
       if (comm) {
@@ -41,22 +42,40 @@ const New = () => {
   return (
     <div className="news">
       <div className="potnii_chlen">
-        {data?.id} - {data?.title} <span>{data?.text}</span>
-        <Input
-          placeholder="Прокоментировать"
-          type="text"
-          variant="dark-outlined"
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setValue(e.target.value)
-          }
-          value={value}
-        />
-        <Button text="Добавить комментарий" type="button" onClick={onAddPost} />
-        {comm &&
-          comm.map((hugs) => {
-            //const { data: flag } = userAPI.useGetUserByIdQuery(hugs.userId);
-            return <div key={hugs.id}>{hugs.text}</div>;
-          })}
+        <h1>
+          {data?.id}. {data?.title}
+        </h1>
+        <hr />
+        <div className="boba">{data?.text}</div>
+        <div className="oleg">
+          <Input
+            placeholder="Прокоментировать"
+            type="text"
+            variant="dark-outlined"
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setValue(e.target.value)
+            }
+            value={value}
+          />
+          <Button
+            text="Добавить комментарий"
+            type="button"
+            onClick={onAddPost}
+          />
+        </div>
+        <div className="joint">
+          <h2>Комментарии:</h2>
+          {comm &&
+            comm
+              .filter((task) => task.newsId === newsId)
+              .map((hugs) => {
+                return (
+                  <div className="matvey" key={hugs.id}>
+                    {hugs.userName}. {hugs.text} <Like hugs={hugs} />
+                  </div>
+                );
+              })}
+        </div>
       </div>
     </div>
   );

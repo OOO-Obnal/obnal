@@ -14,7 +14,10 @@ const News = () => {
           className="news__post"
           onClick={() => b(`/news/${news.id}`)}
         >
-          {news.id}. {news.title}
+          <h1>
+            {news.id}. Новость <hr />
+            {news.title}
+          </h1>
         </div>
       ))}
     </div>
