@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Settings from "../../components/Settings";
 import authContext from "../../context/authContext";
+import Admin from "../Admin";
 
 import "./UserPage.scss";
 
@@ -32,7 +33,9 @@ const UserPage = () => {
               <li>Тех. поддержка</li>
               <li>Мои комментарии</li>
               <li onClick={onLogOut}>Выйти</li>
-              {user?.role === "admin" && <li>Админ-панель</li>}
+              {user?.role === "admin" && (
+                <li onClick={() => navigate("/user/admin")}>Админ-панель</li>
+              )}
             </ul>
           </aside>
           <div className="user__content">
@@ -44,6 +47,7 @@ const UserPage = () => {
             )}
             <Routes>
               <Route path="/settings" element={<Settings />} />
+              <Route path="/admin" element={<Admin />} />
             </Routes>
           </div>
         </div>

@@ -9,27 +9,11 @@
       "role": "user"
     },
     {
-      "name": "234",
-      "password": "123",
-      "email": "123",
-      "userTheme": "dark",
-      "id": 6,
-      "role": "user"
-    },
-    {
       "name": "1111",
       "password": "1111",
       "email": "1111",
       "userTheme": "dark",
       "id": 7,
-      "role": "user"
-    },
-    {
-      "name": "1111111",
-      "password": "1111111",
-      "email": "1111111",
-      "userTheme": "dark",
-      "id": 8,
       "role": "user"
     },
     {
@@ -47,14 +31,6 @@
       "userTheme": "dark",
       "id": 10,
       "role": "admin"
-    },
-    {
-      "name": "Kall",
-      "password": "Kall",
-      "email": "Kall",
-      "userTheme": "dark",
-      "role": "user",
-      "id": 11
     }
   ],
   "news": [
