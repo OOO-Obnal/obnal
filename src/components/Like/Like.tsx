@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, LegacyRef, useEffect, useRef, useState } from "react";
 import { commsAPI } from "../../services/CommsService";
 import { Comms } from "../../types/Comms";
 interface LikePropsType {
@@ -8,14 +8,16 @@ interface LikePropsType {
 const Like: FC<LikePropsType> = ({ hugs }) => {
   const [ChangeLikes] = commsAPI.useChangeLikesMutation();
   const [like, setLike] = useState(false);
+  let likes = hugs.likes;
   const addLike = () => {
     setLike(!like);
-    hugs.likes += 1;
-    ChangeLikes(hugs);
-    console.log(hugs);
+    likes += 1;
+    const id = hugs.id;
+    if (id) {
+      ChangeLikes({ id, likes });
+    }
+    console.log(likes);
   };
-
-  useEffect(() => {}, []);
 
   return (
     <div>
@@ -24,7 +26,7 @@ const Like: FC<LikePropsType> = ({ hugs }) => {
         className={`like ${like ? "active" : ""}`}
         onClick={addLike}
       ></div>
-      <div className="like__like">{hugs.likes}</div>
+      <div className="like__like">{likes}</div>
     </div>
   );
 };
