@@ -20,7 +20,11 @@ export const commsAPI = createApi({
         return {
           url: `/comments/${cumm.id}`,
           method: "PATCH",
+<<<<<<< HEAD
           body: { likes: cumm.likes },
+=======
+          body: cumm.likes,
+>>>>>>> 3de3d910e5ddf5b3cc2c578dd6ef8dfec0042654
         };
       },
     }),

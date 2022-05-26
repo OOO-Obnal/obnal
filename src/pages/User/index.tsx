@@ -2,7 +2,9 @@ import { info } from "console";
 import React, { useContext } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Settings from "../../components/Settings";
+import UserOrders from "../../components/UserOrders";
 import authContext from "../../context/authContext";
+import Admin from "../Admin";
 
 import "./UserPage.scss";
 
@@ -28,11 +30,13 @@ const UserPage = () => {
           <aside className="user__sidebar">
             <ul className="user__sidebar-list">
               <li onClick={() => navigate("/user/settings")}>Настройки</li>
-              <li>Мои заказы</li>
+              <li onClick={() => navigate("/user/orders")}>Мои заказы</li>
               <li>Тех. поддержка</li>
               <li>Мои комментарии</li>
               <li onClick={onLogOut}>Выйти</li>
-              {user?.role === "admin" && <li>Админ-панель</li>}
+              {user?.role === "admin" && (
+                <li onClick={() => navigate("/user/admin")}>Админ-панель</li>
+              )}
             </ul>
           </aside>
           <div className="user__content">
@@ -44,6 +48,8 @@ const UserPage = () => {
             )}
             <Routes>
               <Route path="/settings" element={<Settings />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/orders" element={<UserOrders />} />
             </Routes>
           </div>
         </div>

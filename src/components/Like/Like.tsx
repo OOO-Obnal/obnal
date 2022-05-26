@@ -11,12 +11,20 @@ const Like: FC<LikePropsType> = ({ hugs }) => {
   let likes = hugs.likes;
   const addLike = () => {
     setLike(!like);
+<<<<<<< HEAD
     likes += 1;
+=======
+    const likes = hugs.likes++;
+>>>>>>> 3de3d910e5ddf5b3cc2c578dd6ef8dfec0042654
     const id = hugs.id;
     if (id) {
       ChangeLikes({ id, likes });
     }
+<<<<<<< HEAD
     console.log(likes);
+=======
+    console.log(hugs);
+>>>>>>> 3de3d910e5ddf5b3cc2c578dd6ef8dfec0042654
   };
 
   return (

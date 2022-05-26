@@ -1,0 +1,16 @@
+.admin {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__users {
+    padding: 20px;
+    background-color: #e7d7d0;
+    border-radius: 5px;
+
+    &-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
