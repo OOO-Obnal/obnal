@@ -10,8 +10,11 @@ const Like: FC<LikePropsType> = ({ hugs }) => {
   const [like, setLike] = useState(false);
   const addLike = () => {
     setLike(!like);
-    hugs.likes += 1;
-    ChangeLikes(hugs);
+    const likes = hugs.likes++;
+    const id = hugs.id;
+    if (id) {
+      ChangeLikes({ id, likes });
+    }
     console.log(hugs);
   };
 

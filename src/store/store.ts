@@ -5,12 +5,14 @@ import {
 } from "@reduxjs/toolkit";
 import { commsAPI } from "../services/CommsService";
 import { newsAPI } from "../services/NewsService";
+import { ordersAPI } from "../services/OrdersServices";
 import { userAPI } from "../services/UserService";
 
 const rootReducer = combineReducers({
   [userAPI.reducerPath]: userAPI.reducer,
   [newsAPI.reducerPath]: newsAPI.reducer,
   [commsAPI.reducerPath]: commsAPI.reducer,
+  [ordersAPI.reducerPath]: ordersAPI.reducer,
 });
 
 export const setupStore = () => {
@@ -20,7 +22,8 @@ export const setupStore = () => {
       getDefaultMiddleware()
         .concat(userAPI.middleware)
         .concat(newsAPI.middleware)
-        .concat(commsAPI.middleware),
+        .concat(commsAPI.middleware)
+        .concat(ordersAPI.middleware),
   });
 };
 

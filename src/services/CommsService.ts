@@ -15,9 +15,13 @@ export const commsAPI = createApi({
         return { url: "/comments", method: "POST", body: cumm };
       },
     }),
-    ChangeLikes: bulid.mutation<Comms, Partial<Comms>>({
+    ChangeLikes: bulid.mutation<Comms, Partial<{ id: number; likes: number }>>({
       query(cumm) {
-        return { url: `/comments/${cumm.id}`, method: "PATCH", body: cumm };
+        return {
+          url: `/comments/${cumm.id}`,
+          method: "PATCH",
+          body: cumm.likes,
+        };
       },
     }),
   }),

@@ -1,0 +1,14 @@
+.order {
+  padding: 40px;
+
+  &__form {
+    width: 390px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px 0;
+    background-color: #e7d7d0;
+    border-radius: 5px;
+  }
+}

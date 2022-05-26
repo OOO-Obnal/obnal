@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "name": "SuperSkamer",
-      "password": "skam",
-      "email": "SKAM@mail.secret",
-      "userTheme": "dark",
-      "id": 5,
-      "role": "user"
-    },
-    {
       "name": "1111",
       "password": "1111",
       "email": "1111",
@@ -31,16 +23,6 @@
       "userTheme": "dark",
       "id": 10,
       "role": "admin"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "name": "Kall",
-      "password": "Kall",
-      "email": "Kall",
-      "userTheme": "dark",
-      "role": "user",
-      "id": 11
     },
     {
       "name": "12",
@@ -51,83 +33,124 @@
       "id": 11
     },
     {
-      "name": "123",
+      "name": "12",
       "password": "12",
-      "email": "123@a.ru",
+      "email": "12",
       "userTheme": "dark",
       "role": "user",
       "id": 12
->>>>>>> ac03a3c903c7b42fb44b58268b93526579ea2235
     }
   ],
   "news": [
     {
       "id": 0,
-      "title": "Коот нассал в тапки",
-      "text": "Ахуеть не встать, это существо напало на мой мир и обоссало меня и тапки!",
-      "data": "21.02.22",
-      "time": "12:30",
-      "likes": 4
-    },
-    {
-      "id": 1,
       "title": "Название новости",
       "text": "Текст новости",
       "data": "21.02.22",
       "time": "12:30",
-      "likes": 4
-    },
-    {
-      "id": 2,
-      "title": "Название новости",
-      "text": "Текст новости",
-      "data": "21.02.22",
-      "time": "12:30",
-      "likes": 4
-    },
-    {
-      "id": 3,
-      "title": "Название новости",
-      "text": "Текст новости",
-      "data": "21.03.22",
-      "time": "12:40",
-      "likes": 4
-    },
-    {
-      "id": 4,
-      "title": "Название новости",
-      "text": "Текст новости",
-      "data": "21.03.22",
-      "time": "12:40",
       "likes": 4
     }
   ],
   "comments": [
     {
-      "userName": "12",
+      "id": 0,
+      "userId": 10,
+      "newsId": 0,
+      "text": "Текст комментария",
+      "likes": 4
+    },
+    {
+      "userName": "admin",
       "text": "12",
       "newsId": 0,
       "likes": 0,
       "id": 1
     },
     {
-      "userName": "12",
-      "text": "123",
+      "userName": "admin",
+      "text": "22",
       "newsId": 0,
       "likes": 0,
       "id": 2
     },
     {
-      "text": "123",
+      "userName": "admin",
+      "text": "",
       "newsId": 0,
       "likes": 0,
       "id": 3
     },
     {
-      "text": "123",
+      "userName": "admin",
+      "text": "",
       "newsId": 0,
       "likes": 0,
       "id": 4
+    },
+    {
+      "userName": "admin",
+      "text": "",
+      "newsId": 0,
+      "likes": 0,
+      "id": 5
+    },
+    {
+      "userName": "admin",
+      "text": "",
+      "newsId": 0,
+      "likes": 0,
+      "id": 6
+    },
+    {
+      "userName": "admin",
+      "text": "",
+      "newsId": 0,
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "userName": "admin",
+      "text": "",
+      "newsId": 0,
+      "likes": 0,
+      "id": 8
+    },
+    {
+      "userName": "admin",
+      "text": "",
+      "newsId": 0,
+      "likes": 0,
+      "id": 9
+    }
+  ],
+  "orders": [
+    {
+      "title": "Привет суки",
+      "text": "Обналичьте my anal",
+      "userId": 10,
+      "id": 1
+    },
+    {
+      "title": "12",
+      "text": "12",
+      "userId": 10,
+      "id": 2
+    },
+    {
+      "title": "121",
+      "text": "121",
+      "id": 3
+    },
+    {
+      "title": "121",
+      "text": "212",
+      "id": 4
+    },
+    {
+      "title": "121",
+      "text": "212",
+      "userId": 11,
+      "id": 5
     }
   ]
 }
