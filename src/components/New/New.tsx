@@ -1,40 +1,35 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import authContext from "../../context/authContext";
-import { commsAPI } from "../../services/CommsService";
-import { newsAPI } from "../../services/NewsService";
-import { userAPI } from "../../services/UserService";
-import { Comms } from "../../types/Comms";
-import Like from "../Like/Like";
-import Button from "../UI/Button";
-import Input from "../UI/Input";
-import "./New.scss";
+import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import authContext from '../../context/authContext';
+import { commsAPI } from '../../services/CommsService';
+import { newsAPI } from '../../services/NewsService';
+import { userAPI } from '../../services/UserService';
+import { Comms } from '../../types/Comms';
+import Like from '../Like/Like';
+import Button from '../UI/Button';
+import Input from '../UI/Input';
+import './New.scss';
 
 const New = () => {
   const joint = useLocation();
   const newsId = Number(joint.pathname.split(`/`)[2]);
-  const { data, isError, isLoading } = newsAPI.useGetNewsByIdQuery(newsId);
+  const { data } = newsAPI.useGetNewsByIdQuery(newsId);
 
   const [addPost] = commsAPI.useAddPostMutation();
   const { user } = useContext(authContext);
-  const { data: yarn } = commsAPI.useGetCommsQuery();
-  const [comms, setComms] = useState(yarn);
-  const [value, setValue] = useState("");
-  const [comm, setComm] = useState(comms);
+  const { data: comments } = commsAPI.useGetCommsQuery();
+  const [comms, setComms] = useState(comments);
+  const [value, setValue] = useState('');
 
-  useEffect(() => {
-    if (yarn) {
-      setComms(yarn);
-    }
-  }, [comm]);
+  // В этом компоненте я убрал лишний useState, для удобства поменял переменные
 
   const onAddPost = () => {
     if (user) {
-      const cumm = { userName: user.name, text: value, newsId, likes: 0 };
-      addPost(cumm);
-      setValue("");
-      if (comm) {
-        setComm([...comm, cumm]);
+      const newComm = { userName: user.name, text: value, newsId, likes: 0 };
+      addPost(newComm);
+      setValue('');
+      if (comms) {
+        setComms([...comms, newComm]);
       }
     }
   };
@@ -52,26 +47,20 @@ const New = () => {
             placeholder="Прокоментировать"
             type="text"
             variant="dark-outlined"
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
-              setValue(e.target.value)
-            }
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
             value={value}
           />
-          <Button
-            text="Добавить комментарий"
-            type="button"
-            onClick={onAddPost}
-          />
+          <Button text="Добавить комментарий" type="button" onClick={onAddPost} />
         </div>
         <div className="joint">
           <h2>Комментарии:</h2>
-          {comm &&
-            comm
-              .filter((task) => task.newsId === newsId)
-              .map((hugs) => {
+          {comms &&
+            comms
+              .filter((comm) => comm.newsId === newsId)
+              .map((comment) => {
                 return (
-                  <div className="matvey" key={hugs.id}>
-                    {hugs.userName}. {hugs.text} <Like hugs={hugs} />
+                  <div className="matvey" key={comment.id}>
+                    {comment.userName}. {comment.text} <Like comment={comment} />
                   </div>
                 );
               })}
